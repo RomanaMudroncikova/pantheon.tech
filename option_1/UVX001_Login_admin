@@ -1,0 +1,30 @@
+Identifier: UVX001
+Title: Login admin
+Type: E2E
+Priority: High
+Assigned to: ME
+Estimate: 2 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps: 
+  1. open local host http://localhost:4200/login
+  2. click on login button
+  3. check if is admin redirected to http://localhost:4200/admin
+
+Script:
+ describe('Login admin', () => { 
+    it('Admin redirected to Admin', () => {   
+        cy.visit('http://localhost:4200/login')
+        cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+        cy.url().should('include', 'http://localhost:4200/admin');
+    });
+}); 
+
+Expected Results:
+Admin is log in.
+Admin is redirectied to http://localhost:4200/admin. 
