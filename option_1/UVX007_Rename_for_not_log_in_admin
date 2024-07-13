@@ -1,0 +1,37 @@
+Identifier: UVX007
+Title: Rename for not log in admin
+Type: E2E
+Priority: Low
+Assigned to: ME
+Estimate: 3 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+
+  1. open Crisis Center on navigation bar
+  2. select fourth child with id 4
+  3. delete old name
+  4. crate new name 
+  5. click on Save button
+
+Script:
+
+describe('rename is able for not log in admin', () => {
+  it('rename crisis is able', () => {
+    
+    cy.visit('http://localhost:4200/crisis-center')
+    cy.get(':nth-child(4) > a').click()
+    cy.get('#crisis-name').clear()
+      .type('Procrastinators Meeting Delayed Again_1')
+    cy.get('app-crisis-detail.ng-star-inserted > .ng-star-inserted > div > :nth-child(1)').click()
+  })
+})
+
+Expected Results:
+Fourth child is rename to Procrastinators Meeting Delayed Again_1.
+Admin log in is not required.
