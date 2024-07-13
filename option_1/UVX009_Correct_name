@@ -1,0 +1,36 @@
+Identifier: UVX009
+Title: Correct name
+Type: E2E
+Priority: Low
+Assigned to: ME
+Estimate: 2 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+  1. before each the admin is login
+  2. click on Heroes on navigation bar
+  3. chceck if h2 element contais Heroes
+
+Script:
+
+describe('unsuccessfully rename Sky Rains Great White Sharks', () => {
+  beforeEach(() => {
+  
+    cy.visit('http://localhost:4200/login');
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+    cy.url().should('include', 'http://localhost:4200/admin');
+  }); 
+
+  it('contains correct text', () => {
+    cy.get('[routerlink="/superheroes"]').click()
+    cy.get('h2').contains('Heroes')
+  });   
+});
+
+Expected Results:
+List contains name Heroes.
