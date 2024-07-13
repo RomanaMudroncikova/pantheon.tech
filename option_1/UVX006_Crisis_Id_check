@@ -1,0 +1,44 @@
+Identifier: UVX006
+Title: Crisis Id check
+Type: E2E
+Priority: Low
+Assigned to: ME
+Estimate: 3 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+  1. before each the admin is login
+  2. click on Crisis Center on navigation bar
+  3. select first child with id 3
+  4. check id is equal to 3
+  5. check name is equal to Giant Asteroid Heading For Earth 
+
+Script:
+
+describe('successfully rename Crisis Center', () => {
+  beforeEach(() => {
+
+    cy.visit('http://localhost:4200/login');
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+    cy.url().should('include', 'http://localhost:4200/admin');
+  });
+
+  it('contains correct id and name', () => {
+   
+    cy.get('[routerlink="/crisis-center"]').click()
+    cy.get(':nth-child(3) > a').click()
+    cy.get(':nth-child(3) > a').contains('Giant Asteroid Heading For Earth')
+    cy.get('h3').contains('Giant Asteroid Heading For Earth')
+    cy.get('p').contains('3')
+    cy.get(':nth-child(3) > a > .badge').contains('3')
+  });
+});
+
+Expected Results:
+Id is same in list and in details.
+Name is same in lit and in details.
