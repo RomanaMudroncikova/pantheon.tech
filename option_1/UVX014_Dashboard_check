@@ -1,0 +1,46 @@
+Identifier: UVX014
+Title: Dashboard check
+Type: E2E
+Priority: Low
+Assigned to: ME
+Estimate: 3 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+  1. before each the admin is login
+  2. click on Admin on navigation bar
+  3. check if h2 contains Admin
+  4. check if h3 contains Dashboard
+  5. check if page contains Session ID: None 
+                            Token: None
+                            Preloaded Modules
+                            crisis-center
+
+Script:
+
+describe('unsuccessfully rename Sky Rains Great White Sharks', () => {
+  beforeEach(() => {
+  
+    cy.visit('http://localhost:4200/login');
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+    cy.url().should('include', 'http://localhost:4200/admin');
+  }); 
+
+    it('display correct text', () => {
+      cy.get('[routerlink="./"]').click()
+      cy.get('h2').contains('Admin')
+      cy.get('h3').contains('Dashboard')
+      cy.get('app-admin-dashboard.ng-star-inserted').contains('Session ID: None' )
+      cy.get('app-admin-dashboard.ng-star-inserted').contains('Token: None')
+      cy.get('app-admin-dashboard.ng-star-inserted').contains('Preloaded Modules')
+      cy.get('app-admin-dashboard.ng-star-inserted').contains('crisis-center')
+    });
+  });
+
+Expected Results:
+Text and title is display correctly and have assign values.
