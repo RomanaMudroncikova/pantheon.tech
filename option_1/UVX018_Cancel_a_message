@@ -1,0 +1,53 @@
+Identifier: UVX018
+Title: Cancel a message
+Type: E2E
+Priority: Medium
+Assigned to: ME
+Estimate: 5 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+  1. before each the admin is login
+  2. click on Contact button on navigation bar 
+  3. type random message
+  4. click on Cancel button 
+
+Script:
+
+function generateRandomString(maxLength) {
+  const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const length = Math.floor(Math.random() * maxLength) + 1; // Random length between 1 and maxLength
+  let result = '';
+  const charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
+describe('unsuccessfully rename Sky Rains Great White Sharks', () => {
+  beforeEach(() => {
+  
+    cy.visit('http://localhost:4200/login');
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+    cy.url().should('include', 'http://localhost:4200/admin');
+  }); 
+
+   it('do not send a message', () => {
+      const text = generateRandomString(1300);
+      cy.get('[ng-reflect-router-link="[object Object]"]').click()
+      cy.get('#message').type(text)
+      cy.get('app-compose-message.ng-star-inserted > .ng-star-inserted > :nth-child(2)').click()
+    }); 
+  });
+
+Expected Results:
+Contact form is display.
+Message can be written.
+Message is cancel.
+Contact form is no longer display.
