@@ -1,0 +1,47 @@
+Identifier: UVX010
+Title: Display heros info
+Type: E2E
+Priority: High
+Assigned to: ME
+Estimate: 4 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+  1. before each the admin is login
+  2. click on Heroes on navigation bar
+  3. generate random id
+  4. select random id
+  5. view hero details
+
+Script:
+
+describe('unsuccessfully rename Sky Rains Great White Sharks', () => {
+  beforeEach(() => {
+  
+    cy.visit('http://localhost:4200/login');
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+    cy.url().should('include', 'http://localhost:4200/admin');
+  }); 
+
+  it('information is display', () => {
+    
+    cy.visit('http://localhost:4200/superheroes');
+    cy.get('a > .badge').should('have.length.greaterThan', 0)
+      .its('length')
+      .then((badgeCount) => {
+      
+       const randomIndex = Cypress._.random(0, badgeCount - 1);
+       cy.get('a > .badge').eq(randomIndex).click();
+      });
+  });
+});
+
+Expected Results:
+Random id is generated.
+Hero with same id is selected.
+His details are display.
