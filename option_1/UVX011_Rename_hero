@@ -1,0 +1,45 @@
+Identifier: UVX011
+Title: Rename hero
+Type: E2E
+Priority: High
+Assigned to: ME
+Estimate: 4 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+  1. before each the admin is login
+  2. click on Heroes on navigation bar
+  3. select hero named Dynama
+  4. rename her name to Dynama_1
+  5. click on back button 
+  6. redirect back to list
+  7. check if name is change
+
+Script:
+
+describe('unsuccessfully rename Sky Rains Great White Sharks', () => {
+  beforeEach(() => {
+  
+    cy.visit('http://localhost:4200/login');
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+    cy.url().should('include', 'http://localhost:4200/admin');
+  }); 
+
+it('rename to Dynama_1', () => {
+    
+    cy.get('[routerlink="/superheroes"]').click() 
+    cy.get(':nth-child(6) > a').click() 
+    cy.get('#hero-name').clear().type('Dynama_1') 
+    cy.get('button').click()
+    cy.get('.selected > a').contains('Dynama_1')
+  });  
+}); 
+
+Expected Results:
+Selected hero is rename. 
+New name is display in list.
