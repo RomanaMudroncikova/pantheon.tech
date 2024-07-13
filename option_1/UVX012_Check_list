@@ -1,0 +1,54 @@
+Identifier: UVX012
+Title: Check list
+Type: E2E
+Priority: High
+Assigned to: ME
+Estimate: 3 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+  1. before each the admin is login
+  2. click on Heroes on navigation bar
+  3. check if list exist
+  4. check if list contains names
+
+Script:
+
+describe('unsuccessfully rename Sky Rains Great White Sharks', () => {
+  beforeEach(() => {
+  
+    cy.visit('http://localhost:4200/login');
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+    cy.url().should('include', 'http://localhost:4200/admin');
+  }); 
+
+
+ it('contains list of heroes', () => {
+      cy.get('[routerlink="/superheroes"]').click()
+      cy.get('app-hero-list.ng-star-inserted').should('be.visible')
+      cy.get('app-hero-list.ng-star-inserted').find('li').should('have.length', 9)
+      const expectedHeroes = [
+        'Dr. Nice',
+        'Bombasto',
+        'Celeritas',
+        'Magneta',
+        'RubberMan',
+        'Dynama',
+        'Dr. IQ',
+        'Magma',
+        'Tornado'
+      ]
+      cy.get('app-hero-list.ng-star-inserted').find('li').each((item, index) => {
+        cy.wrap(item).should('contain.text', expectedHeroes[index]);
+        }); 
+      });
+    }); 
+
+Expected Results:
+List is display correctly.
+List contains correct names.
