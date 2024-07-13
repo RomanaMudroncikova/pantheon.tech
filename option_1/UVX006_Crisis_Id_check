@@ -14,7 +14,7 @@ Preconditions:
 Steps:
   1. before each the admin is login
   2. click on Crisis Center on navigation bar
-  3. select first child with id 3
+  3. select third child with id 3
   4. check id is equal to 3
   5. check name is equal to Giant Asteroid Heading For Earth 
 
