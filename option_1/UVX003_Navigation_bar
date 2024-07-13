@@ -1,0 +1,47 @@
+Identifier: UVX003
+Title: Navigation bar
+Type: E2E
+Priority: High
+Assigned to: ME
+Estimate: 4 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+  1. before each the admin is login
+  2. click on Crisis Center on navigation bar
+  3. check if URL is correct
+  4. click on Contact on navigation bar
+  5. check if URL is correct
+  6. click on Heroes on navigation bar
+  7. check if URL is correct
+  8. click on Login on navigation bar
+  9. check if URL is correct
+
+Script:
+describe('navigation bar', () => {
+  beforeEach(() => {
+  
+    cy.visit('http://localhost:4200/login');
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+    cy.url().should('include', 'http://localhost:4200/admin');
+  });
+
+  it('contains correct text', () => {
+    cy.get('[routerlink="/crisis-center"]').click()
+    cy.url().should('include', 'http://localhost:4200/crisis-center')
+    cy.get('[ng-reflect-router-link="[object Object]"]').click()
+    cy.url().should('include', 'http://localhost:4200/crisis-center(popup:compose)')
+    cy.get('[routerlink="/superheroes"]').click()
+    cy.url().should('include', 'http://localhost:4200/superheroes')
+    cy.get('[routerlink="/login"]').click()
+    cy.url().should('include', 'http://localhost:4200/login')
+  });
+});
+
+Expected Results:
+Navigation buttons have the correct URLs assigned.
