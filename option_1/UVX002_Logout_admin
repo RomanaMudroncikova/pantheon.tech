@@ -1,0 +1,36 @@
+Identifier: UVX002
+Title: Logout admin
+Type: E2E
+Priority: High
+Assigned to: ME
+Estimate: 3 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+  1. before each the admin is login
+  2. click on Login on navigation bar
+  3. check if admin is log in
+  4. click on Logout button
+
+Script:
+describe('logout admin', () => {
+  beforeEach(() => {
+
+    cy.visit('http://localhost:4200/login')
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+    cy.url().should('include', 'http://localhost:4200/admin');
+  });
+
+  it('logout admin', () => {
+    cy.get('[routerlink="/login"]').click()
+    cy.get('app-login.ng-star-inserted > :nth-child(2)').contains('Logged in')
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+  });
+});
+Expected Results:
+Log in admin is log out.
