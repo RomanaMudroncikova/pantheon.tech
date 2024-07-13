@@ -33,4 +33,4 @@ it('display correct text', () => {
   });
 
 Expected Results: 
-The Manage your crises here text is displaz in Manage crises folder.
+The Manage your crises here text is display in Manage crises folder.
