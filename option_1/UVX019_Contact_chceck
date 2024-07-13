@@ -1,0 +1,42 @@
+Identifier: UVX019
+Title: Contact chceck
+Type: E2E
+Priority: Low
+Assigned to: ME
+Estimate: 3 s
+
+Preconditions:
+  cypress install
+  node.js install
+  angular install
+  application is created
+
+Steps:
+  1. before each the admin is login
+  2. click on Contact button on navigation bar 
+  3. check if h3 element contains Contact Crisis Center text
+  4. check if label element contains Enter your message: text
+  5. ckeck if Send button contains Send text
+  6. ckeck if Cancel button contains Cancel text
+
+Script:
+
+describe('unsuccessfully rename Sky Rains Great White Sharks', () => {
+  beforeEach(() => {
+  
+    cy.visit('http://localhost:4200/login');
+    cy.get('app-login.ng-star-inserted > :nth-child(3) > .ng-star-inserted').click()
+    cy.url().should('include', 'http://localhost:4200/admin');
+  }); 
+
+it('display correct text', () => {
+      cy.get('[ng-reflect-router-link="[object Object]"]').click()
+      cy.get('app-compose-message.ng-star-inserted > h3').contains('Contact Crisis Center')
+      cy.get('label').contains('Enter your message:')
+      cy.get('app-compose-message.ng-star-inserted > .ng-star-inserted > :nth-child(1)').contains('Send')
+      cy.get('app-compose-message.ng-star-inserted > .ng-star-inserted > :nth-child(2)').contains('Cancel')
+    });  
+  });
+
+Expected Results:
+Elements on Contact form contains correct values.
