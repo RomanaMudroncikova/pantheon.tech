@@ -17,6 +17,7 @@ Steps:
   3. select first child with id 1
   4. delete old name
   5. crate new name 
+  6. click on Save button
 
 Script:
 
