@@ -1,0 +1,18 @@
+describe("HTTP request", () => {
+
+  it("Put call", () => {
+      cy.request({
+            method: 'PUT',
+            url: 'https://jsonplaceholder.typicode.com//posts/58',
+            body: {
+              userId: 1,
+              id: 58,
+              title: "Update",
+              body: "call"
+            }
+      }) 
+        .its('status')
+        .should('eq', 200);  
+  })
+  
+})
