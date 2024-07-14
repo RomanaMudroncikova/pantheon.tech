@@ -1,0 +1,108 @@
+Test Plan:
+1. Introduction
+
+  1.1 Purpose:
+    The purpose of this test plan is to outline the testing strategy and approach 
+    for the newly added features of the website: https://docs.cypress.io/.
+
+  1.2 Scope:
+    This test plan covers E2E testing of the website: https://docs.cypress.io/.
+    The testing will include both manual and automated tests.
+
+2. Test Items
+  Site search bar
+  Side menu "Dashboard" category and subcategories
+  New language support - Spanish
+
+3. Features to be Tested
+  Search bar functionality
+  Search bar navigation
+  Dashboard view and correct information display
+  Interaction between subcategories
+  Correct display of metrics
+  Correct translation into Spanish
+  Navigation between languages
+  Completion of translation
+
+4. Features Not to be Tested
+  API integrations
+  Integration with external software
+
+5. Approach
+  
+  5.1 Testing Levels:
+    E2E Testing: Simulation of real user scenarios, verification of website workflows. 
+      Testing will include user interaction with the Dashboard and Subcategories, 
+      navigation, data display, and translation.
+
+    Integration Teting: Testing the correct cooperation between Dashboard, 
+      Subcategories, and other categories of the website. Verifying correct display
+      according to the search bar input. Ensuring translation is consistent across the entire website.
+
+    Regression Testing: Retesting already tested functionalities after implementing 
+      new changes to ensure no regression has occurred. 
+
+  5.2 Testing Types:
+    Functional Testing: Verify each feature against requirements.
+    Non-functional Testing: Verify each feature is accessible and performs well.
+
+  5.3 Test Design Techniques:
+    Black-box testing for accessibility of features.
+    Automation testing using Cypress for regression and integration verification.
+
+6. Item Pass/Fail Criteria
+  All automated test cases must pass without critical defects.
+  No high-severity bugs should remain unresolved.
+
+7. Suspension Criteria and Resumption Requirements
+  Automated testing will not be suspended if critical bugs are found.
+  Manual testing will be suspended if critical bugs are found.
+  Manual testing will resume once the critical bugs are fixed and verified.
+
+8. Test Deliverables
+  Test Cases
+  Test Scripts
+  Test Data
+  Test Screenshots
+
+9. Testing Tasks
+  Prepare test environment
+  Develop test cases
+  Execute test cases
+  Report defects
+
+10. Environmental Needs
+  Website access
+  Web browser: Google Chrome
+  Cypress framework
+  Operating System: Windows 10
+  8GB RAM
+
+11. Responsibilities
+  Test Manager: --
+  QA Lead: --
+  Testers: --
+
+12. Staffing and Training Needs
+One manual tester.
+Two automated testers with knowledge of the Cypress framework.
+
+13. Schedule
+  Activity	         |Start Date	   |End Date
+  Test Planning	     |01-Aug-2024	   |04-Aug-2024
+  Test Case Design	 |05-Aug-2024	   |14-Aug-2024
+  Test Execution	   |15-Aug-2024	   |30-Aug-2024
+  Test Reporting	   |01-Sep-2024	   |05-Sep-2024
+
+14. Risks and Contingencies
+  Risk: Delayed delivery of test environment
+      Contingency: Use a simulated environment
+  Risk: Lack of accurate information about Dashboard and Subcategories functionality.
+      Contingency: Close cooperation with developers and users to find out the details.
+  Risk: Inaccurate translations
+      Contingency: Close cooperation with translator/interpreter.
+
+15. Approvals
+Project Manager: _______________ Date: _______________
+QA Manager: _______________ Date: _______________
+Client Representative: _______________ Date: _______________
