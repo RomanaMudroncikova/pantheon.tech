@@ -1,25 +1,24 @@
-
-  (Run Starting)
+(Run Starting)
 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
   │ Cypress:        13.13.0                                                                        │
   │ Browser:        Electron 118 (headless)                                                        │
   │ Node Version:   v20.15.1 (C:\Program Files\nodejs\node.exe)                                    │
-  │ Specs:          1 found (httpsRequest.cy.js)                                                   │
-  │ Searched:       C:\Users\HP\Desktop\cypress_doc\cypress\e2e\API\httpsRequest.cy.js             │
+  │ Specs:          1 found (get.cy.js)                                                            │
+  │ Searched:       C:\Users\HP\Desktop\cypress_doc\cypress\e2e\API\get.cy.js                      │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
 
-  Running:  httpsRequest.cy.js                                                              (1 of 1)
+  Running:  get.cy.js                                                                       (1 of 1)
 
 
   HTTP request
-    √ Get call (666ms)
+    √ Get call (961ms)
 
 
-  1 passing (897ms)
+  1 passing (1s)
 
 
   (Results)
@@ -32,8 +31,8 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     0 seconds                                                                        │
-  │ Spec Ran:     httpsRequest.cy.js                                                               │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     get.cy.js                                                                        │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
@@ -44,6 +43,6 @@
 
        Spec                                              Tests  Passing  Failing  Pending  Skipped  
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ √  httpsRequest.cy.js                       901ms        1        1        -        -        - │
+  │ √  get.cy.js                                00:01        1        1        -        -        - │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-    √  All specs passed!                        901ms        1        1        -        -        -  
+    √  All specs passed!                        00:01        1        1        -        -        -  
