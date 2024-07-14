@@ -1,0 +1,88 @@
+Introduction
+This is the execution of a home assignment containing two options.
+
+Option_1: Test cases for the Tour of Heroes application.
+Option_2: Test plan, test cases, and scripts for https://docs.cypress.io/. It also includes API tests for https://jsonplaceholder.typicode.com/.
+
+Option_1 contains:
+Test_Plan
+Environmental_Needs
+Scripts:
+UVX001_Login_admin.cy.ts
+UVX002_Logout_admin.cy.ts
+UVX003_Navigation_bar.cy.ts
+UVX004_Successfully_rename__id_1.cy.ts
+UVX005_Unsuccessfully_rename_id_2.cy.ts
+UVX006_Crisis_Id_check.cy.ts
+UVX007_Rename_for_not_log_in_admin.cy.ts
+UVX008_Crisis_text_check.cy.ts
+UVX009_Correct_name.cy.ts
+UVX010_Display_heros_info.cy.ts
+UVX011_Rename_hero.cy.ts
+UVX012_Check_list.cy.ts
+UVX013_Sidekicks_page.cy.ts
+UVX014_Dashboard_check.cy.ts
+UVX015_Manage_Crises.cy.ts
+UVX016_Manage_Heroes.cy.ts
+UVX017_Send_a_message.cy.ts
+UVX018_Cancel_a_message.cy.ts
+UVX019_Contact_check.cy.ts
+Test_Cases:
+Mind Map.jpg
+UVX001_Login_admin
+UVX002_Logout_admin
+UVX003_Navigation_bar
+UVX004_Successfully_rename__id_1
+UVX005_Unsuccessfully_rename_id_2
+UVX006_Crisis_Id_check
+UVX007_Rename_for_not_log_in_admin
+UVX008_Crisis_text_check
+UVX009_Correct_name
+UVX010_Display_heros_info
+UVX011_Rename_hero
+UVX012_Check_list
+UVX013_Sidekicks_page
+UVX014_Dashboard_check
+UVX015_Manage_Crises
+UVX016_Manage_Heroes
+UVX017_Send_a_message
+UVX018_Cancel_a_message
+UVX019_Contact_check
+Option_2 obsahuje:
+Rest API:
+DELETE:
+API_delete_post - TestRail.pdf
+Run
+Script
+delete.jpg
+GET:
+API_get_post - TestRail.pdf
+Run
+Script
+get.jpg
+POST:
+API_post_post - TestRail.pdf
+Run
+Script
+post.jpg
+PUT:
+API_put_post - TestRail.pdf
+Run
+Script
+put.jpg
+Scripts:
+autocorrection.cy.js
+navigate.cy.js
+search_should.cy.js
+search_warning.cy.js
+Test_Cases:
+Dashboard_Highlight a sub category - TestRail.pdf
+Dashboard_display and have subcategories - TestRail.pdf
+Dashboard_redirect to a different page - TestRail.pdf
+Search_word Should and display a result - TestRail.pdf
+Search_Autocorrect text - TestRail.pdf
+Search_Navigation through keystrokes - TestRail.pdf
+Search_word dlkd and display warning - TestRail.pdf
+Spanish_Commands should not be translated - TestRail.pdf
+Spanish_Switch to Spanish Language - TestRail.pdf
+Spanish_Translation of subcategories - TestRail.pdf
