@@ -1,25 +1,11 @@
-
-  (Run Starting)
-
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Cypress:        13.13.0                                                                        │
-  │ Browser:        Electron 118 (headless)                                                        │
-  │ Node Version:   v20.15.1 (C:\Program Files\nodejs\node.exe)                                    │
-  │ Specs:          1 found (delete.cy.js)                                                         │
-  │ Searched:       C:\Users\HP\Desktop\cypress_doc\cypress\e2e\API\delete.cy.js                   │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-────────────────────────────────────────────────────────────────────────────────────────────────────
-
-  Running:  delete.cy.js                                                                    (1 of 1)
+Running:  delete.cy.js                                                                    (1 of 1)
 
 
   HTTP request
-    √ Delete call (858ms)
+    √ Delete call (818ms)
 
 
-  1 passing (1s)
+  1 passing (971ms)
 
 
   (Results)
@@ -32,7 +18,7 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     1 second                                                                         │
+  │ Duration:     0 seconds                                                                        │
   │ Spec Ran:     delete.cy.js                                                                     │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
@@ -44,6 +30,6 @@
 
        Spec                                              Tests  Passing  Failing  Pending  Skipped  
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ √  delete.cy.js                             00:01        1        1        -        -        - │
+  │ √  delete.cy.js                             973ms        1        1        -        -        - │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-    √  All specs passed!                        00:01        1        1        -        -        -  
+    √  All specs passed!                        973ms        1        1        -        -        -  
