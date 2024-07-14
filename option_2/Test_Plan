@@ -3,16 +3,20 @@ Test Plan:
 
   1.1 Purpose:
     The purpose of this test plan is to outline the testing strategy and approach 
-    for the newly added features of the website: https://docs.cypress.io/.
+    for the newly added features of the website: https://docs.cypress.io/ as 
+    well as REST tests for https://jsonplaceholder.typicode.com/.
+
 
   1.2 Scope:
-    This test plan covers E2E testing of the website: https://docs.cypress.io/.
+    This test plan covers E2E testing of the website: https://docs.cypress.io/
+    and API https://jsonplaceholder.typicode.com/ for /post.
     The testing will include both manual and automated tests.
 
 2. Test Items
   Site search bar
   Side menu "Dashboard" category and subcategories
   New language support - Spanish
+  REST API endpoint from https://jsonplaceholder.typicode.com/
 
 3. Features to be Tested
   Search bar functionality
@@ -23,9 +27,10 @@ Test Plan:
   Correct translation into Spanish
   Navigation between languages
   Completion of translation
+  REST API endpoint post (GET, PUT, DELETE, POST)
 
 4. Features Not to be Tested
-  API integrations
+  API integrations (other than https://jsonplaceholder.typicode.com/)
   Integration with external software
 
 5. Approach
@@ -42,33 +47,47 @@ Test Plan:
     Regression Testing: Retesting already tested functionalities after implementing 
       new changes to ensure no regression has occurred. 
 
+    REST API Testing: Verification of the endpoint at https://jsonplaceholder.typicode.com/ 
+      to ensure they return correct data and handle edge cases appropriately.
+
   5.2 Testing Types:
     Functional Testing: Verify each feature against requirements.
     Non-functional Testing: Verify each feature is accessible and performs well.
+    REST API Testing: Verify the correctness and performance of API endpoint.
 
   5.3 Test Design Techniques:
     Black-box testing for accessibility of features.
     Automation testing using Cypress for regression and integration verification.
+    REST API testing using tool Cypress for API endpoints.
 
 6. Item Pass/Fail Criteria
   All automated test cases must pass without critical defects.
   No high-severity bugs should remain unresolved.
+  All REST API tests must return the expected results with no errors.
 
 7. Suspension Criteria and Resumption Requirements
   Automated testing will not be suspended if critical bugs are found.
   Manual testing will be suspended if critical bugs are found.
   Manual testing will resume once the critical bugs are fixed and verified.
+  REST API testing will be suspended if the endpoints become unavailable 
+  or if there are critical bugs. 
+  Testing will resume once the issues are resolved.
 
 8. Test Deliverables
   Test Cases
   Test Scripts
   Test Data
   Test Screenshots
+  REST API Test Cases
+  REST API Test Scripts
+   REST API Runs
 
 9. Testing Tasks
   Prepare test environment
   Develop test cases
+  Prepare REST API tests
   Execute test cases
+  Execute REST API tests
   Report defects
 
 10. Environmental Needs
@@ -101,6 +120,8 @@ Two automated testers with knowledge of the Cypress framework.
       Contingency: Close cooperation with developers and users to find out the details.
   Risk: Inaccurate translations
       Contingency: Close cooperation with translator/interpreter.
+  Risk: API endpoints become unavailable
+      Contingency: Coordinate with the API provider for restoration.
 
 15. Approvals
 Project Manager: _______________ Date: _______________
