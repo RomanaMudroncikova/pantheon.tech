@@ -1,0 +1,15 @@
+describe('open sreach bar and display warning', () => {
+  it('display warning', () => {
+    cy.visit('https://docs.cypress.io/')
+    cy.get('.osano-cm-denyAll').click()
+    cy.get('.navbar__items--right').click()
+    cy.get('#docsearch-input').type('dlkd')
+    cy.get('.DocSearch-Title').contains('No results for "dlkd"')
+    cy.get('.DocSearch-Title > strong').should('have.css', 'font-weight', '700')
+    cy.get('.DocSearch-Help').contains('Try searching for:')
+    cy.get(':nth-child(1) > .DocSearch-Prefill').contains('API')
+    cy.get(':nth-child(2) > .DocSearch-Prefill').contains('Examples')
+    cy.get(':nth-child(3) > .DocSearch-Prefill').contains('Guides')
+    cy.screenshot('search_warning')
+  })
+}) 
