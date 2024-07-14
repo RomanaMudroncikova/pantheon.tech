@@ -1,6 +1,7 @@
 Needs:
     Website Access: 
         https://docs.cypress.io/ 
+        https://jsonplaceholder.typicode.com
     Web Browser: 
         Google chrome
         Firefox 
@@ -33,3 +34,11 @@ Steps to create testing enviroment:
     6. End-to-end (e2e) configuration was selected.
     7. Chrome browser was selected
     8. Project was created and ready for writing tests.
+
+Rest API steps to create testing enviroment:
+    1. Created API folder in cypress_doc
+    2. The terminal in Visual Studio Code was open.
+    3. For terminal run following command was execue:
+           npx cypress run --spec {plus Relative path of spec}
+    4. For cypress run following command was execue:
+            npx cypress open
