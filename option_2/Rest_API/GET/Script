@@ -1,7 +1,7 @@
 describe("HTTP request", () => {
 
   it("Get call", () =>{
-      cy.request('GET', 'https://jsonplaceholder.typicode.com/albums/27')
+      cy.request('GET', 'https://jsonplaceholder.typicode.com/post/27')
           .its('status')
           .should('eq', 200)
   })
