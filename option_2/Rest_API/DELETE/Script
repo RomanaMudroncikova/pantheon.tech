@@ -1,0 +1,18 @@
+describe("HTTP request", () => {
+
+  it("Delete call", () => {
+      cy.request({
+            method: 'DELETE',
+            url: 'https://jsonplaceholder.typicode.com//photos/258',
+            body: {
+              userId: 1,
+              id: 258,
+              title: "delete",
+              body: "call"
+            }
+      }) 
+        .its('status')
+        .should('eq', 200);  
+  })
+  
+})
