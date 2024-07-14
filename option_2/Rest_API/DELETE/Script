@@ -3,7 +3,7 @@ describe("HTTP request", () => {
   it("Delete call", () => {
       cy.request({
             method: 'DELETE',
-            url: 'https://jsonplaceholder.typicode.com//photos/258',
+            url: 'https://jsonplaceholder.typicode.com/posts/18',
             body: {
               userId: 1,
               id: 258,
