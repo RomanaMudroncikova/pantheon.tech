@@ -1,6 +1,4 @@
 Test cases are in TestRail 
 
-Links: 
-https://option2.testrail.io/index.php?/cases/view/3
-https://option2.testrail.io/index.php?/cases/view/2 
-https://option2.testrail.io/index.php?/cases/view/1
+Link:
+https://option2.testrail.io/index.php?/suites/view/1&group_by=cases:section_id&group_order=asc&display_deleted_cases=0
