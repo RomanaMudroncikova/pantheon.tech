@@ -1,6 +1,35 @@
-Website Access: 
-Web Browser: 
-Testing Framework:
-Operating System: 
-Hardware Requirements:
-Network Requirements: 
+Needs:
+    Website Access: 
+        https://docs.cypress.io/ 
+    Web Browser: 
+        Google chrome
+        Firefox 
+        Electron (bundled with Cypress)
+    Testing Framework: 
+        Cypress
+    Software Needed:
+        Cypress framework (v13.13.0)
+        Node.js (v10.8.1)
+        VisualStudioCode (v1.91.1)
+    Operating System: 
+        Windows 10 or later
+    Hardware Requirements:
+        Minimum 8 GB of RAM 
+        Minimum 50 GB of vvvvspace
+    Network Requirements:
+        A stable and fast internet connection is recommended.
+        No firewall or network restrictions that could block access to external resources.
+
+Steps to create testing enviroment:
+    1. Folder cypress_ doc was created.
+    2. Folder cypress_ doc was opend in Visual Studio Code.
+    3. The terminal in Visual Studio Code was open.
+    4. Following commands were execute :
+        npm init -y
+        npm -v
+        npm install cypress --save-dev
+        npx cypress open
+    5. Cypress was open.
+    6. End-to-end (e2e) configuration was selected.
+    7. Chrome browser was selected
+    8. Project was created and ready for writing tests.
