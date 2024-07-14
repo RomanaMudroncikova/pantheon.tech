@@ -1,0 +1,17 @@
+describe("HTTP request", () => {
+
+  it("Post call", () => {
+      cy.request({
+            method: 'POST',
+            url: 'https://jsonplaceholder.typicode.com/posts/',
+            body: {
+              title:"Test post",
+              body:"This is post call",
+              UserId:5
+            }
+      }) 
+        .its('status')
+        .should('eq', 201);  
+  })
+  
+})
