@@ -5,8 +5,6 @@ This is the execution of a home assignment containing two options.
 **Option_2:** Test plan, test cases, and scripts for https://docs.cypress.io/. It also includes API tests for https://jsonplaceholder.typicode.com/.
 
 **Option_1 contains:**
-  Test Plan
-  Environmental Needs
 **Scripts:**
   UVX001_Login_admin.cy.ts
   UVX002_Logout_admin.cy.ts
@@ -50,7 +48,8 @@ This is the execution of a home assignment containing two options.
   UVX019_Contact_check
 
 **Option_2 contains:**
-
+ Test Plan
+  Environmental Needs
 **Rest API:**
   DELETE:
     API_delete_post - TestRail.pdf
