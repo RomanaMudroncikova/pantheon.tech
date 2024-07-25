@@ -21,7 +21,7 @@ Steps:
 
 Script:
 
-describe('unsuccessfully rename Sky Rains Great White Sharks', () => {
+describe('display correct text of the buttons in contact form', () => {
   beforeEach(() => {
   
     cy.visit('http://localhost:4200/login');
